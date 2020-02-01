@@ -1,0 +1,24 @@
+nav .brand-logo{
+    margin-left: 10px;
+}
+.mainSection{
+    background-image: url('../images/man working out-carousel.jpg');
+    background-size: 100%;
+    text-align: center;
+    color: white;
+    filter: grayscale(70%);
+    height: 500px;
+    padding: 100px;
+}
+.mainHeading{
+    text-shadow: 1px 1px black;
+}
+.mainSubHeading{
+    text-shadow: 1px 1px black;
+}
+h1{
+    margin: 0 !important;
+}
+.modal{
+    width: 40% !important;
+}
