@@ -3,6 +3,8 @@
     $('.modal').modal();
   });
 
+  $('.dropdown-trigger').dropdown();
+
   $("#password1").on("focusout", function (e) {
     if ($(this).val() != $("#passwordConfirm1").val()) {
         $("#passwordConfirm1").removeClass("valid").addClass("invalid");
