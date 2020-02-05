@@ -19,12 +19,39 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="mailto:nkelliny@outlook.com">Contact</a></li>
-        <li><a href="#">Login</a></li>
-        <li><a class="waves-effect waves-light btn modal-trigger" data-target="modal1">Sign Up</a></li>
+        <li><a class="modal-trigger" data-target="login">Login</a></li>
+        <li><a class="waves-effect waves-light btn modal-trigger" data-target="signup">Sign Up</a></li>
       </ul>
     </div>
   </nav>
-  <div id="modal1" class="modal">
+  <div id="login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+              </div>
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light" type="submit" name="action">Login
+          </button>
+          <button class="btn waves-effect waves-light modal-trigger" data-target="signup">Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="signup" class="modal">
     <div class="modal-content">
       <h4>Sign Up</h4>
       <div class="row">
@@ -47,20 +74,20 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="password" type="password" class="validate">
+              <input id="password1" type="password" class="validate">
               <label for="password">Password</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-              <input id="passwordConfirm" type="password" class="validate">
+              <input id="passwordConfirm1" type="password" class="validate">
               <label for="passwordConfirm">Confirm Password</label>
             </div>
           </div>
       </div>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <button class="btn waves-effect waves-light" type="submit" name="action">Sign Up
       </button>
-      <button class="btn waves-effect waves-light">Login
+      <button class="btn waves-effect waves-light modal-trigger" data-target="login">Login
       </button>
       </form>
     </div>
@@ -70,9 +97,13 @@
     <div class="container">
       <h1 class="mainHeading">Welcome to Nutrifit!</h1>
       <h5 class="mainSubHeading">The ultimate in meal time planning.</h5>
-      <a class="waves-effect waves-light btn">Get Started</a>
+      <a class="waves-effect waves-light btn modal-trigger" data-target="signup">Get Started</a>
     </div>
   </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  </button>
+  <button class="btn waves-effect waves-light">Login
+  </button>
 
   <div id="about">
     <div class="container">
