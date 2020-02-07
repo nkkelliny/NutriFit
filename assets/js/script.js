@@ -47,7 +47,7 @@ $.ajax({
           mealText = data.common[0].food_name;
           console.log(mealImg);
           $('#mealImg').attr("src",mealImg);
-          $('#mealText').text(mealText);
+          $('#mealText').attr("value", mealText);
       }
   });
 

@@ -73,12 +73,11 @@
       </div>
       <div class="row">
         <div class="col s3">
-          <h6>Suggested meal: <span id="mealText"></span></h6>
+          <h6>Suggested meal: <input id="mealText" type="text" placeholder="Enter different meal" /></h6>
           <img id="mealImg" />
           <div id="nlabel"></div>
         </div>
         <div class="col s9" style="padding: 0;">
-          <input id="pac-input" class="controls" type="text" placeholder="Search Box">
           <div id="map" style="height: 747px;"></div>
         </div>
       </img>
@@ -147,9 +146,9 @@
         }
 
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        setTimeout(function(){
+          var input = document.getElementById('mealText');
+          var searchBox = new google.maps.places.SearchBox(input);
 
         // Bias the SearchBox results towards current map's viewport.
         map.addListener('bounds_changed', function() {
@@ -203,7 +202,9 @@
             }
           });
           map.fitBounds(bounds);
+          $("#mealText").click();
         });
+      }, 1000);
       }
       </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZUehBr3-jZPj4khH8ybBCpd7PoB_RyaU&libraries=places&callback=initAutocomplete&callback=initAutocomplete" async defer></script>
