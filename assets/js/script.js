@@ -46,7 +46,7 @@
         $('#errorMsg').show();
     }else {
         if(userName != ''){
-            localStorage.setItem('name', userName);
+            localStorage.setItem('name', userName.value);
         }
         localStorage.setItem('pw', newPw.value);
         window.location.href = 'https://nkelliny1.github.io/NutriFit/map.html';
