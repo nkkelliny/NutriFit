@@ -45,11 +45,17 @@
         console.log('ERROR');
         $('#errorMsg').show();
     }else {
+        if(userName != ''){
+            localStorage.setItem('name', userName);
+        }
         localStorage.setItem('pw', newPw.value);
         window.location.href = 'https://nkelliny1.github.io/NutriFit/map.html';
     }
 }
 
+if(localStorage.getItem('name')){
+    document.getElementById("userName").innerHTML = localStorage.getItem('name');
+}
 function logout(){
     window.location.href = 'https://nkelliny1.github.io/NutriFit/index.html';
 }
