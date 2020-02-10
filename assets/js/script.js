@@ -4,6 +4,8 @@
     $('select').formSelect();
   });
 
+  $('.dropdown-trigger').dropdown();
+
   var userName = document.getElementById('email1');
   var pw = document.getElementById('password1');
   
@@ -29,6 +31,29 @@
           window.location.href = 'https://nkelliny1.github.io/NutriFit/map.html';
       }
   }
+
+  function settings() {
+  
+    var storedName = localStorage.getItem('name');
+    var storedPw = localStorage.getItem('pw');
+
+    var userName = document.getElementById('email2');
+    var userPw = document.getElementById('oldPassword');
+    var newPw = document.getElementById('newPassword');
+
+    if(userName.value !== storedName || userPw.value !== storedPw) {
+        console.log('ERROR');
+        $('#errorMsg').show();
+    }else {
+        localStorage.setItem('pw', newPw.value);
+        window.location.href = 'https://nkelliny1.github.io/NutriFit/map.html';
+    }
+}
+
+function logout(){
+    window.location.href = 'https://nkelliny1.github.io/NutriFit/index.html';
+}
+
 
 var recipes = ['2 granola bars', 'whole grain cereal', '2 eggs', '1 bagel with 1 tbsp cream cheese']
 
@@ -149,16 +174,3 @@ setTimeout(function(){
             e.keyCode = 13;
           $('#pac-input').trigger(e);
 }, 3000);
-
-// $.ajax({
-//     type: "POST",
-//     url: "https://trackapi.nutritionix.com/v2/natural/nutrients?query=butter",
-//     headers: {
-//         'x-app-id': '17b9542d',   //If your header name has spaces or any other char not appropriate
-//         'x-app-key': 'baf2162fd62075e1574fc8922466bac9',  //for object property name, use quoted notation shown in second
-//     },
-//     dataType: 'json',
-//     success: function (data) {
-//         console.info(data);
-//     }
-// });
