@@ -50,6 +50,10 @@
     }
 }
 
+function logout(){
+    window.location.href = 'https://nkelliny1.github.io/NutriFit/index.html';
+}
+
 
 var recipes = ['2 granola bars', 'whole grain cereal', '2 eggs', '1 bagel with 1 tbsp cream cheese']
 
