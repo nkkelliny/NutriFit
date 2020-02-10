@@ -20,22 +20,22 @@
             <li><a href="index.html#about">About</a></li>
             <li><a href="mailto:nkelliny@outlook.com">Contact</a></li>
             <!-- Dropdown Trigger -->
-            <li></li><a class='dropdown-trigger btn' href='#' onclick="logout()">Logout</a></li>
+            <li></li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Username</a></li>
 
             <!-- Dropdown Structure -->
-            <!-- <ul id='dropdown1' class='dropdown-content'>
+            <ul id='dropdown1' class='dropdown-content'>
               <li><a href="#!" class="modal-trigger" data-target='settings'>Settings</a></li>
               <li class="divider" tabindex="-1"></li>
-              <li><a href="#!">Logout</a></li>
-            </ul> -->
+              <li><a href='#' onclick="logout()">Logout</a></li>
+            </ul>
           </ul>
         </div>
       </nav>
-      <!-- <div id="settings" class="modal">
+      <div id="settings" class="modal">
         <div class="modal-content">
           <h4>Settings</h4>
           <div class="row">
-            <form class="col s12">
+            <form class="col s12" action="#" onsubmit="settings()">
               <div class="row">
               <div class="row">
                 <div class="input-field col s12">
@@ -45,7 +45,7 @@
               </div>
               <div class="row">
                 <div class="input-field col s12">
-                  <input type="email" id="email" >Email</input>
+                  <input type="email" id="email2" >Email</input>
                   <label for="email">Email</label>
                 </div>
               </div>
@@ -62,6 +62,9 @@
                 </div>
               </div>
             </div>
+            <div class="row" id="errorMsg" style="color: red; display: none;">
+              <p>Incorrect information entered. Please try again.</p>
+            </div>
             <button class="btn waves-effect waves-light" type="submit" name="action">Save
             </button>
             <button class="btn waves-effect waves-light">Cancel
@@ -69,7 +72,7 @@
             </form>
           </div>
         </div>
-      </div> -->
+      </div>
       </div>
       <div class="row">
         <div class="col s3">
