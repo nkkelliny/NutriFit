@@ -23,7 +23,7 @@
   
       if(userName.value !== storedName || userPw.value !== storedPw) {
           console.log('ERROR');
-
+          $('#errorMsg').show();
       }else {
           console.log('You are loged in.');
           window.location.href = 'https://nkelliny1.github.io/NutriFit/map.html';
